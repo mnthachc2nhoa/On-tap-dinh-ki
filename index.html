@@ -318,49 +318,36 @@
     // 2. KHO ĐỀ THI MẪU TÍCH HỢP (Mặc định có sẵn cho học sinh luyện ngay)
     const DEFAULT_QUIZZES = [
       // TIN HỌC 6
-      { id: 't6_gk1', subject: 'Tin 6', period: 'GK1', title: 'Đề Ôn Giữa Kỳ 1: Thông tin và Dữ liệu', time: 15, count: 5, xp: 50, url: 'OnTap_GK1_Tin_6.html'},
+      { id: 't6_gk1', subject: 'Tin 6', period: 'GK1', title: 'Đề Ôn Giữa Kỳ 1: Thông tin và Dữ liệu', time: 15, count: 5, xp: 50, url: 'OnTap_GK1_Tin_6.html'},      
+	{ id: 't6_ck1', subject: 'Tin 6', period: 'CK1', title: 'Đề Ôn Cuối Kỳ 1: Mạng Máy Tính & Internet', time: 15, count: 5, xp: 60, url: '', questions: [
+        { q: 'Mạng máy tính là gì?', options: ['Tập hợp các máy tính kết nối với nhau', 'Máy tính dùng internet', 'Mạng điện thoại', 'Máy tính dùng dây điện'], ans: 0 },
+        { q: 'WWW là viết tắt của từ gì?', options: ['World Wide Web', 'World White Web', 'Web Wide World', 'World Web Wide'], ans: 0 }
+      ]},
 
       // TIN HỌC 7
-      { id: 't7_gk1', subject: 'Tin 7', period: 'GK1', title: 'Đề Ôn Giữa Kỳ 1: Thiết Bị Số & Mạng XH', time: 15, count: 5, xp: 50, url: '', questions: [
-        { q: 'Địa chỉ ô C5 nằm ở đâu?', options: ['Cột C, Dòng 5', 'Dòng C, Cột 5', 'Ô giao giữa dòng 3 và cột 5', 'Ký hiệu tùy ý'], ans: 0 },
-        { q: 'Hàm nào dùng để tính tổng trong Excel?', options: ['AVERAGE', 'SUM', 'MAX', 'COUNT'], ans: 1 }
-      ]},
+      { id: 't7_gk1', subject: 'Tin 7', period: 'GK1', title: 'Đề Ôn Giữa Kỳ 1: Thiết Bị Số & Mạng XH', time: 15, count: 5, xp: 50, url: 'OnTap_GK1_Tin_7.html'},
       { id: 't7_ck1', subject: 'Tin 7', period: 'CK1', title: 'Đề Ôn Cuối Kỳ 1: Định Dạng Bảng Tính', time: 15, count: 5, xp: 60, url: '', questions: [
         { q: 'Để căn giữa nội dung ô tính, ta chọn biểu tượng nào?', options: ['Align Left', 'Center', 'Align Right', 'Justify'], ans: 1 }
       ]},
 
       // TIN HỌC 8
-      { id: 't8_gk1', subject: 'Tin 8', period: 'GK1', title: 'Đề Ôn Giữa Kỳ 1: Lịch Sử Máy Tính & Bảng tính', time: 15, count: 5, xp: 70, url: '', questions: [
-        { q: 'Máy tính thế hệ thứ nhất sử dụng linh kiện nào?', options: ['Bóng đèn chân không', 'Bán dẫn', 'Mạch tích hợp', 'Vi xử lý'], ans: 0 },
-        { q: 'Trong Scratch, khối lệnh nào dùng để lặp lại vô hạn?', options: ['Repeat', 'Forever', 'If-Then', 'Wait'], ans: 1 }
-      ]},
+      { id: 't8_gk1', subject: 'Tin 8', period: 'GK1', title: 'Đề Ôn Giữa Kỳ 1: Lịch Sử Máy Tính & Bảng tính', time: 15, count: 5, xp: 70, url: 'OnTap_GK1_Tin_6.html'},
       { id: 't8_ck1', subject: 'Tin 8', period: 'CK1', title: 'Đề Ôn Cuối Kỳ 1: Xử Lý Đồ Họa & Thuật Toán', time: 20, count: 5, xp: 80, url: '', questions: [
         { q: 'Dải lệnh nào chứa các lệnh vẽ hình trong Scratch?', options: ['Motion', 'Pen', 'Looks', 'Sound'], ans: 1 }
       ]},
 
       // TIN HỌC 9
-      { id: 't9_gk1', subject: 'Tin 9', period: 'GK1', title: 'Đề Ôn Giữa Kỳ 1: Thiết bị KTS & Thông tin số', time: 15, count: 5, xp: 70, url: '', questions: [
-        { q: 'Hành vi nào sau đây vi phạm văn hóa khi sử dụng mạng xã hội?', options: ['Đăng thông tin sai sự thật', 'Tải tài liệu học tập', 'Tăng tương tác bài viết hay', 'Chia sẻ tin chuẩn xác'], ans: 0 }
-      ]},
+      { id: 't9_gk1', subject: 'Tin 9', period: 'GK1', title: 'Đề Ôn Giữa Kỳ 1: Thiết bị KTS & Thông tin số', time: 15, count: 5, xp: 70, url: 'OnTap_GK1_Tin_9.html'},
 
       // GDCD 8
-      { id: 'gd8_gk1', subject: 'GDCD 8', period: 'GK1', title: 'Đề Ôn Giữa Kỳ 1: Truyền thống dân tộc & Lao động cần cù, sáng tạo', time: 15, count: 5, xp: 50, url: '', questions: [
-        { q: 'Biểu hiện nào thể hiện tính tự lập?', options: ['Tự làm bài tập về nhà không cần nhắc nhở', 'Đợi cha mẹ làm giúp', 'Chép bài của bạn', 'Ủy thác việc nhà'], ans: 0 },
-        { q: 'Tôn trọng lẽ phải là gì?', options: ['Công nhận, ủng hộ những điều đúng đắn', 'Nghe theo đám đông', 'Bao che cho bạn thân', 'Im lặng trước cái sai'], ans: 0 }
-      ]},
-      { id: 'gd8_ck1', subject: 'GDCD 8', period: 'CK1', title: 'Đề Ôn Cuối Kỳ 1: Lao Động & Pháp Luật', time: 15, count: 5, xp: 60, url: '', questions: [
-        { q: 'Lao động cần cù, sáng tạo giúp con người điều gì?', options: ['Nâng cao năng suất và phát triển bản thân', 'Tiết kiệm sức lực tối đa', 'Không cần suy nghĩ', 'Tránh né công việc'], ans: 0 }
-      ]},
+      { id: 'gd8_gk1', subject: 'GDCD 8', period: 'GK1', title: 'Đề Ôn Giữa Kỳ 1: Truyền thống dân tộc & Lao động cần cù, sáng tạo', time: 15, count: 5, xp: 50, url: 'OnTap_GK1_GDCD_8.html'},
+      { id: 'gd8_ck1', subject: 'GDCD 8', period: 'CK1', title: 'Đề Ôn Cuối Kỳ 1: Lao Động & Pháp Luật', time: 15, count: 5, xp: 60, url: 'OnTap_GK1_GDCD_8.html'},
 
       // CÔNG NGHỆ 6
-      { id: 'cn6_gk1', subject: 'Công nghệ 6', period: 'GK1', title: 'Đề Ôn Giữa Kỳ 1: Nhà Ở & Dinh Dưỡng', time: 15, count: 5, xp: 50, url: '', questions: [
-        { q: 'Nhà ở có vai trò gì đối với con người?', options: ['Bảo vệ con người khỏi tác động thời tiết', 'Nơi vui chơi giải trí', 'Nơi lưu trữ máy móc', 'Phương tiện di chuyển'], ans: 0 }
-      ]},
+      { id: 'cn6_gk1', subject: 'Công nghệ 6', period: 'GK1', title: 'Đề Ôn Giữa Kỳ 1: Nhà Ở & Dinh Dưỡng', time: 15, count: 5, xp: 50, url: 'https://thaythoc2.github.io/dautruongcongnghe/'},
 
       // CÔNG NGHỆ 7
-      { id: 'cn7_gk1', subject: 'Công nghệ 7', period: 'GK1', title: 'Đề Ôn Giữa Kỳ 1: Trồng Trọt & Bảo Vệ Cây Trồng', time: 15, count: 5, xp: 50, url: '', questions: [
-        { q: 'Mục đích chính của việc làm đất là gì?', options: ['Làm cho đất tơi xốp, diệt cỏ dại', 'Làm đất cứng lại', 'Tăng độ mặn cho đất', 'Để trang trí ruộng'], ans: 0 }
-      ]}
+      { id: 'cn7_gk1', subject: 'Công nghệ 7', period: 'GK1', title: 'Đề Ôn Giữa Kỳ 1: Trồng Trọt & Bảo Vệ Cây Trồng', time: 15, count: 5, xp: 50, url: 'https://thaythoc2.github.io/dautruongcongnghe/'}
     ];
 
     // 3. THÔNG TIN HỌC SINH & LƯU TRỮ LOCALSTORAGE
@@ -679,7 +666,4 @@
   </script>
 </body>
 </html>
-```
-
----
 
